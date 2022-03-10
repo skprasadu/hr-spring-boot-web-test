@@ -1,0 +1,18 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  readonly_paths:
+    - src/test/*
+  scoring:
+    command: mvn clean test
+    files:
+      - target/surefire-reports/TEST-com.example.hrspringbootwebtest.controller.Test_1_BookController.xml
+      - target/surefire-reports/TEST-com.example.hrspringbootwebtest.controller.Test_2_BookService.xml
+  ide_config:
+    default_open_files:
+      - src/main/java/com/example/hrspringbootwebtest/model/Book.java
+      - src/main/java/com/example/hrspringbootwebtest/service/BookService.java
+      - src/test/java/com/example/hrspringbootwebtest/controller/Test_2_BookService.java
+      - src/test/java/com/example/hrspringbootwebtest/controller/Test_1_BookController.java
+    project_menu:
+      test: mvn clean test

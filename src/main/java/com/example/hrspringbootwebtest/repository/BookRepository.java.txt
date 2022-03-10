@@ -1,0 +1,16 @@
+package com.example.hrspringbootwebtest.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.hrspringbootwebtest.model.Book;
+import java.util.Set;
+
+public interface BookRepository extends JpaRepository<Book, Long> {
+
+    /**
+    * You need to implement an extra method to do select top three category
+    **/
+    
+	//@Query(nativeQuery = true, value="<<-------- YOUR QUERY GOES HERE -------->>")
+	//public Set<String> findTop3BooksBasedOnRating();
+}
